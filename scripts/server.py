@@ -611,6 +611,8 @@ def handle_client(conn, addr):
                                 print("Detection POST Response Status - ", response.status_code)
                             except BaseException:
                                 print("Cannot POST right now")
+        if not myReturn:
+            myReturn = "No audio to analyse."
         conn.send(myReturn.encode(FORMAT))
 
         # time.sleep(3)
